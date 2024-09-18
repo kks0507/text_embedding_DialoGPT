@@ -1,0 +1,13 @@
+# 1. transformers: DialoGPT 및 Hugging Face 모델을 사용하기 위해 필요
+transformers
+# 2. pandas: 데이터프레임을 사용하여 CSV 파일을 처리하기 위해 필요
+pandas
+# 3. numpy: 벡터 연산과 임베딩 처리에 사용
+numpy
+# 4. scipy: 코사인 유사도를 계산하기 위해 사용
+scipy
+# 5. sentence-transformers: 텍스트 임베딩을 위한 모델 사용
+sentence-transformers
+# 6. torch: PyTorch 기반의 DialoGPT 모델을 실행하기 위해 필요
+torch
+# 7. 7. re: 텍스트 전처리를 위해 기본적으로 사용되는 정규 표현식 라이브러리 (별도 설치 불필요, Python 기본 제공)
