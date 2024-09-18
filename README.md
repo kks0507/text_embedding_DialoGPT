@@ -22,6 +22,8 @@ pip install -r requirements.txt
 - sentence-transformers
 - torch
 
+<br>
+
 ### Text to CSV Conversion
 먼저 텍스트 파일을 CSV 파일로 변환해야 합니다. 텍스트 파일을 `text_To_CSV_Converter.py`를 실행하여 CSV 파일로 변환하세요:
 
@@ -65,6 +67,8 @@ def get_embedding(text):
 ```
 이 함수는 `SentenceTransformer` 모델을 사용하여 입력된 텍스트 데이터를 임베딩(벡터화)합니다. 이 과정에서 텍스트는 컴퓨터가 이해할 수 있는 숫자 데이터로 변환됩니다. `encode()` 함수는 입력된 텍스트를 임베딩으로 변환하며, 그 결과는 리스트 형식으로 변환됩니다. 변환된 벡터 데이터는 차후에 텍스트 간의 유사도를 비교하거나 검색하는 데 사용됩니다.
 
+<br>
+
 #### 질문에 답변하는 함수: `search.py`
 ```python
 def answer_question(question, conversation_history):
@@ -96,6 +100,8 @@ def answer_question(question, conversation_history):
 3. **DialoGPT를 사용한 답변 생성**: 생성된 문맥과 질문을 합쳐서 모델에 입력으로 전달합니다. 모델은 대화 형식으로 답변을 생성하며, 이 답변은 사용자가 터미널에서 확인할 수 있습니다.
 4. **대화 이력 관리**: 대화의 연속성을 유지하기 위해, 이전 대화 이력을 저장하고, 새로운 입력을 통해 계속해서 대화를 이어나갑니다.
 
+<br>
+
 #### 텍스트에서 줄 바꿈을 제거하고 데이터프레임으로 변환하는 함수: `text_To_CSV_Converter.py`
 ```python
 def remove_newlines(text):
@@ -122,15 +128,26 @@ def text_to_df(data_file):
 <br>
 
 ## Note
-**DialoGPT**는 Microsoft에서 개발한 대화형 언어 모델로, GPT-2 모델을 기반으로 구축되었습니다. 주로 대화 시나리오에 적합하도록 학습되었으며, Reddit에서 수집한 대규모 대화 데이터를 학습하여 자연스러운 대화 생성을 목표로 합니다. 
-이 모델은 사용자의 질문이나 입력에 대해 일관성 있고 인간적인 답변을 생성하는 데 특화되어 있으며, 챗봇이나 대화 에이전트 구축에 유용하게 사용됩니다. 다양한 대화 상황에서 유연하게 대처할 수 있도록 훈련되어, 문맥에 맞는 답변을 생성할 수 있습니다.
-DialoGPT는 Hugging Face의 `transformers` 라이브러리를 통해 쉽게 사용할 수 있으며, `AutoModelForCausalLM` 및 `AutoTokenizer`와 함께 사용하여 대화 기반 애플리케이션을 구축하는 데 활용됩니다.
+DialoGPT는 Microsoft에서 개발한 대화형 언어 모델로, GPT-2 모델을 기반으로 구축되었습니다.  
+주로 대화 시나리오에 적합하도록 학습되었으며, Reddit에서 수집한 대규모 대화 데이터를 학습하여 자연스러운 대화 생성을 목표로 합니다.  
+
+이 모델은 사용자의 질문이나 입력에 대해 일관성 있고 인간적인 답변을 생성하는 데 특화되어 있으며, 챗봇이나 대화 에이전트 구축에 유용하게 사용됩니다.  
+다양한 대화 상황에서 유연하게 대처할 수 있도록 훈련되어, 문맥에 맞는 답변을 생성할 수 있습니다.  
+
+DialoGPT는 Hugging Face의 transformers 라이브러리를 통해 쉽게 사용할 수 있으며,  
+AutoModelForCausalLM 및 AutoTokenizer와 함께 사용하여 대화 기반 애플리케이션을 구축하는 데 활용됩니다.
+
+<br>
 
 ## Contributor
 - kks0507
 
+<br>
+
 ## License
 This project is licensed under the MIT License.
+
+<br>
 
 ## Repository
 코드 및 프로젝트의 최신 업데이트는 [여기](https://github.com/kks0507/text_embedding_DialoGPT.git)에서 확인할 수 있습니다.
